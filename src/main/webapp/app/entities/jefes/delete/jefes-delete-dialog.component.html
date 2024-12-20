@@ -1,0 +1,24 @@
+@if (jefes) {
+  <form name="deleteForm" (ngSubmit)="confirmDelete(jefes.id!)">
+    <div class="modal-header">
+      <h4 class="modal-title" data-cy="jefesDeleteDialogHeading" jhiTranslate="entity.delete.title">Confirmar operación de borrado</h4>
+    </div>
+
+    <div class="modal-body">
+      <jhi-alert-error></jhi-alert-error>
+      <p id="jhi-delete-jefes-heading" jhiTranslate="dunderMifflinApp.jefes.delete.question" [translateValues]="{ id: jefes.id }">
+        ¿Seguro que quiere eliminar Jefes {{ jefes.id }}?
+      </p>
+    </div>
+
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="cancel()">
+        <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+      </button>
+
+      <button id="jhi-confirm-delete-jefes" data-cy="entityConfirmDeleteButton" type="submit" class="btn btn-danger">
+        <fa-icon icon="times"></fa-icon>&nbsp;<span jhiTranslate="entity.action.delete">Eliminar</span>
+      </button>
+    </div>
+  </form>
+}

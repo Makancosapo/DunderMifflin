@@ -1,0 +1,28 @@
+{
+  "dunderMifflinApp": {
+    "empleados": {
+      "home": {
+        "title": "Empleados",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Empleados",
+        "createOrEditLabel": "Crear o editar Empleados",
+        "notFound": "Ningún Empleados encontrado"
+      },
+      "created": "Un nuevo Empleados ha sido creado con el identificador {{ param }}",
+      "updated": "Un Empleados ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Empleados ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Empleados {{ id }}?"
+      },
+      "detail": {
+        "title": "Empleados"
+      },
+      "id": "ID",
+      "nombre": "Nombre",
+      "apellido": "Apellido",
+      "correo": "Correo",
+      "telefono": "Telefono",
+      "departamento": "Departamento"
+    }
+  }
+}

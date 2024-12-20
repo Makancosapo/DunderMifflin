@@ -1,0 +1,31 @@
+{
+  "annotations": {
+    "changelogDate": "20241208222555"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ubicacion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "presupuesto",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "name": "Departamentos",
+  "relationships": [
+    {
+      "otherEntityField": "nombre",
+      "otherEntityName": "jefes",
+      "relationshipName": "nombrejefe",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

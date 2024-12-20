@@ -1,0 +1,27 @@
+{
+  "dunderMifflinApp": {
+    "departamentos": {
+      "home": {
+        "title": "Departamentos",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Departamentos",
+        "createOrEditLabel": "Crear o editar Departamentos",
+        "notFound": "Ningún Departamentos encontrado"
+      },
+      "created": "Un nuevo Departamentos ha sido creado con el identificador {{ param }}",
+      "updated": "Un Departamentos ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Departamentos ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Departamentos {{ id }}?"
+      },
+      "detail": {
+        "title": "Departamentos"
+      },
+      "id": "ID",
+      "nombre": "Nombre",
+      "ubicacion": "Ubicacion",
+      "presupuesto": "Presupuesto",
+      "nombrejefe": "Nombrejefe"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "annotations": {
+    "changelogDate": "20241208222557"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "telefono",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Jefes",
+  "relationships": [],
+  "searchEngine": "no"
+}

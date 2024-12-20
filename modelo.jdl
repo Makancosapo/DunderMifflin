@@ -1,0 +1,34 @@
+
+entity Empleados {
+	nombre String,
+    apellido String,
+    correo String,
+    telefono String,
+
+	}
+entity Departamentos{
+	nombre String,
+    ubicacion String,
+    presupuesto BigDecimal
+    
+}
+
+entity Jefes {
+	nombre String,
+    telefono String
+
+}
+
+relationship ManyToOne {
+	  Departamentos{nombrejefe(nombre)} to Jefes,
+      Empleados {departamento(nombre)} to Departamentos
+   
+    }
+    
+
+
+
+
+
+
+

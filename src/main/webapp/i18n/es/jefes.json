@@ -1,0 +1,25 @@
+{
+  "dunderMifflinApp": {
+    "jefes": {
+      "home": {
+        "title": "Jefes",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Jefes",
+        "createOrEditLabel": "Crear o editar Jefes",
+        "notFound": "Ningún Jefes encontrado"
+      },
+      "created": "Un nuevo Jefes ha sido creado con el identificador {{ param }}",
+      "updated": "Un Jefes ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Jefes ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Jefes {{ id }}?"
+      },
+      "detail": {
+        "title": "Jefes"
+      },
+      "id": "ID",
+      "nombre": "Nombre",
+      "telefono": "Telefono"
+    }
+  }
+}

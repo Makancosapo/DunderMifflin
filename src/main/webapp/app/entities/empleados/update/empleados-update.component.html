@@ -1,0 +1,77 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-empleados-heading"
+        data-cy="EmpleadosCreateUpdateHeading"
+        jhiTranslate="dunderMifflinApp.empleados.home.createOrEditLabel"
+      >
+        Crear o editar Empleados
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="dunderMifflinApp.empleados.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_nombre" jhiTranslate="dunderMifflinApp.empleados.nombre">Nombre</label>
+          <input type="text" class="form-control" name="nombre" id="field_nombre" data-cy="nombre" formControlName="nombre" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_apellido" jhiTranslate="dunderMifflinApp.empleados.apellido">Apellido</label>
+          <input type="text" class="form-control" name="apellido" id="field_apellido" data-cy="apellido" formControlName="apellido" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_correo" jhiTranslate="dunderMifflinApp.empleados.correo">Correo</label>
+          <input type="text" class="form-control" name="correo" id="field_correo" data-cy="correo" formControlName="correo" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_telefono" jhiTranslate="dunderMifflinApp.empleados.telefono">Telefono</label>
+          <input type="text" class="form-control" name="telefono" id="field_telefono" data-cy="telefono" formControlName="telefono" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_departamento" jhiTranslate="dunderMifflinApp.empleados.departamento">Departamento</label>
+          <select
+            class="form-control"
+            id="field_departamento"
+            data-cy="departamento"
+            name="departamento"
+            formControlName="departamento"
+            [compareWith]="compareDepartamentos"
+          >
+            <option [ngValue]="null"></option>
+            @for (departamentosOption of departamentosSharedCollection; track $index) {
+              <option [ngValue]="departamentosOption">{{ departamentosOption.nombre }}</option>
+            }
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Guardar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
